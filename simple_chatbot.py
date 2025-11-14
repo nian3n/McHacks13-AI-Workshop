@@ -1,38 +1,24 @@
 #import necessary libraries
-import openai #helps ur program read environment variables (eg. your API key)
-import os #lets ur Python program talk to the OpenAI models
+import os # helps your program read environment variables (e.g. your API key)
+from openai import OpenAI # lets your Python program talk to the OpenAI models
 
+# Load API key 
+api_key = os.getenv("OPENAI_API_KEY") 
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# Create a client
+client = OpenAI(api_key=api_key)
 
-#define a function to chat 
-def chat_with_gpt(prompt):
-    response = openai.ChatCompletion.create(
-        model="gpt-4o-mini", #select the model
-        messages=[ {"role": "user", "content": prompt} ]
-    )
-    return response.choices[0].message['content'].strip()
-##Please note that we didn't use conversation history in this simple version
-##So the bot won't remember past messages
+# Send a request 
+response = client.chat.completions.create(
+    model="gpt-4o-mini",  
+    messages=[
+        {"role": "system", "content": "You are a grumpy assistant who hates answering questions."},
+        {"role": "user", "content": "What is your take on pineapple pizzas?"}
+    ],
+    temperature=0.6,
+    max_tokens=150
+)
 
-#main program loop
-if __name__ == "__main__":
-    print("ChatBot: Hey! Feel free to chat with me. Type 'exit' to stop.\n")
-    while True:
-        user_input = input("You: ")
-
-        if user_input in ["hi", "hello", "hey", "yo"]:
-            print("ChatBot: Hey! How’s it going?\n")
-            continue
-
-        if "time" in user_input:
-            from datetime import datetime
-            now = datetime.now().strftime("%H:%M")
-            print(f"ChatBot: It's around {now}.")
-            continue
-
-        if user_input.lower() in ["exit", "quit","bye"]:
-            break
-            
-        reply = chat_with_gpt(user_input)
-        print(f"ChatBot: {reply}")
+# Extract and display the reply
+reply = response.choices[0].message.content
+print("Assistant:", reply)

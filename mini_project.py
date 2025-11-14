@@ -1,65 +1,57 @@
-#import necessary libraries
-import os #helps ur program read environment variables (eg. your API key)
-from openai import OpenAI #lets ur Python program talk to the OpenAI models
+import os
+from openai import OpenAI
 
-client = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key)
 
-MODEL_NAME = "gpt-4o-mini"
+MODEL = "gpt-4o-mini"
 
+messages = [
+    {"role": "system", "content": "You are a helpful assistant who summarize files and answer questions simply but concisely."}
+]
 
-def brainstorm_ideas(topic):
-    """
-    Ask the model to generate hackathon project ideas
-    based on the given topic.
-    """
-    messages = [
-        {
-            "role": "system",
-            "content": (
-                "You are an AI assistant that helps students brainstorm "
-                "creative but realistic hackathon project ideas. "
-                "Keep ideas short, concrete, and beginner-friendly."
-            ),
-        },
-        {
-            "role": "user",
-            "content": (
-                f"Give me 3–5 hackathon project ideas based on this topic:\n"
-                f"'{topic}'.\n"
-                "For each idea, include:\n"
-                "- a short title\n"
-                "- 1–2 line description\n"
-            ),
-        },
-    ]
+def chat(prompt):
+    messages.append({"role": "user", "content": prompt})
 
     response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=messages,
-        temperature=0.8,   
-        max_tokens=400, 
+        model=MODEL,
+        messages=messages
     )
 
-    return response.choices[0].message.content.strip()
+    reply = response.choices[0].message.content.strip()
+    messages.append({"role": "assistant", "content": reply})
+    return reply
 
 
-if __name__ == "__main__":
-    print("💡 AI Brainstorm Buddy")
-    print("Type a theme or problem (or 'exit' to quit).")
-    print()
+def summarize_file(path):
+    if not os.path.exists(path):
+        return f"File not found: {path}"
 
-    while True:
-        topic = input("Your theme: ").strip()
+    try:
+        with open(path, "r") as f:
+            content = f.read()
+    except:
+        return "Unable to read file. Try a different file."
 
-        if topic.lower() in ["exit", "quit", "bye"]:
-            print("Bye, good luck at your hackathons! 🚀")
-            break
+    if len(content) > 6000:   # safety
+        content = content[:6000] + "\n...[truncated]"
 
-        if not topic:
-            print("Please type something, e.g. 'mental health', 'climate', 'education tech'.")
-            continue
+    prompt = "Summarize this file in 3–5 bullet points:\n\n" + content
+    return chat(prompt)
 
-        print("\n🔍 Brainstorming ideas...\n")
-        ideas = brainstorm_ideas(topic)
-        print(ideas)
-        print("\n" + "-" * 50 + "\n")
+
+print("Assistant: Type /file <path> to summarize a file, or /exit to quit.\n")
+
+while True:
+    user_input = input("You: ").strip()
+
+    if user_input.startswith("/file"):
+        path = user_input[5:].strip()
+        print("Assistant:", summarize_file(path), "\n")
+        continue
+
+    if user_input.lower() in {"/exit", "exit", "quit"}:
+        print("Assistant: Goodbye!")
+        break
+
+    print("Assistant:", chat(user_input), "\n")

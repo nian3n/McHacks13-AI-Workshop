@@ -46,4 +46,3 @@ source ~/.zshrc
 [Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)</br>
 [OpenAI API Docs (Models, Parameters, Examples)](https://platform.openai.com/docs)</br>
 [CS50: Introduction to AI with Python](https://cs50.harvard.edu/ai/)</br>
-[Dataquest: Build an AI Chatbot with Python + OpenAI](https://www.dataquest.io/blog/build-an-ai-chatbot-with-python-and-the-openai-api/?utm_source=chatgpt.com)
