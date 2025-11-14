@@ -1,8 +1,8 @@
-import os
-from openai import OpenAI
+#import necessary libraries
+import os #helps ur program read environment variables (eg. your API key)
+from openai import OpenAI #lets ur Python program talk to the OpenAI models
 
-# 1. Create the client (make sure OPENAI_API_KEY is set in your env)
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = os.getenv("OPENAI_API_KEY")
 
 MODEL_NAME = "gpt-4o-mini"
 
