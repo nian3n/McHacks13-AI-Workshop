@@ -1,21 +1,19 @@
 ## Getting Started
 1. Clone the repo
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone [https://github.com/<your-username>/<your-repo-name>.git](https://github.com/nian3n/McHacks13-AI-Workshop.git)
+cd McHacks13-AI-Workshop
 2. Install dependencies
 From the root directory:
-pip install openai python-dotenv
+pip install openai 
 3. Set your OpenAI API key
 Create a .env file in the project root:
-OPENAI_API_KEY=your_api_key_here
+OPENAI_API_KEY='your_api_key_here'
 ⚠️ Never hard-code your API key directly inside Python files.
 ⚠️ Never commit .env to GitHub.
-4. Run your first script
-For example, to run the basic chatbot:
-python chatbot-basic/chatbot.py
+4. Run the script
 
 ## Beginner’s Tutorial for the OpenAI API in Python  
-Based on the work of Tilburg AI (March 11, 2024)  
+Adapted from on the work of Tilburg AI (March 11, 2024)  
 
 ### 🛠 Requirements  
 - Python (version 3.8 or plus) 
