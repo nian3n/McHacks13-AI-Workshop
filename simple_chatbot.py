@@ -5,15 +5,17 @@ import os #lets ur Python program talk to the OpenAI models
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-#define a function to chat with GPT
+#define a function to chat 
 def chat_with_gpt(prompt):
     response = openai.ChatCompletion.create(
-        model="gpt-4o-mini",
+        model="gpt-4o-mini", #select the model
         messages=[ {"role": "user", "content": prompt} ]
     )
     return response.choices[0].message['content'].strip()
+##Please note that we didn't use conversation history in this simple version
+##So the bot won't remember past messages
 
-
+#main program loop
 if __name__ == "__main__":
     print("ChatBot: Hey! Feel free to chat with me. Type 'exit' to stop.\n")
     while True:
