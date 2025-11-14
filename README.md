@@ -1,4 +1,4 @@
-
+## Getting Started
 1. Clone the repo
 git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
@@ -14,18 +14,14 @@ OPENAI_API_KEY=your_api_key_here
 For example, to run the basic chatbot:
 python chatbot-basic/chatbot.py
 
-# OpenAI API Tutorial in Python
-
-### Beginner’s Tutorial for the OpenAI API in Python  
+## Beginner’s Tutorial for the OpenAI API in Python  
 Based on the work of Tilburg AI (March 11, 2024)  
-
-This repository walks you through the steps to get started with the OpenAI API in Python, from setup to making your first request.
 
 ---
 
 ## 🛠 Requirements  
-- Python installed on your machine  
-- IDE or text editor (e.g., VS Code)  
+- Python (version 3.8 or plus) 
+- IDE or text editor 
 - An OpenAI account and API key  
 
 ---
@@ -45,10 +41,9 @@ nano ~/.zshrc        # or ~/.bash_profile depending on your shell
 # add:
 export OPENAI_API_KEY='your_api_key_here'
 source ~/.zshrc
+```
 
-
-### 📚More Learning Resources
-These are curated for beginners:
+## 📚More Learning Resources (beginners)
 OpenAI Quickstart Guide
 https://platform.openai.com/docs/quickstart?utm_source=chatgpt.com
 Best Practices for Prompt Engineering
