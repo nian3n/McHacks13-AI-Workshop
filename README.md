@@ -10,8 +10,8 @@ From the root directory:
 
 #### 3. Set your OpenAI API key
 Create a `.env` file in the project root:
-`OPENAI_API_KEY='your_api_key_here'`
-⚠️ Never hard-code your API key directly inside Python files.
+`OPENAI_API_KEY='your_api_key_here'`</br>
+⚠️ Never hard-code your API key directly inside Python files.</br>
 ⚠️ Never commit `.env` to GitHub.
 
 #### 4. Run the script
