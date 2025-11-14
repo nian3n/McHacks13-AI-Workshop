@@ -16,15 +16,15 @@ Create a `.env` file in the project root:
 
 #### 4. Run the script
 
-## Beginner’s Tutorial for the OpenAI API in Python  
+## Setting up environment
 Adapted from the work of Tilburg AI (March 11, 2024)  
 
-### 🛠 Requirements  
+### Requirements  
 - Python (version 3.8 or plus) 
 - IDE or text editor 
 - An OpenAI account and API key  
 
-### 🔧 Setup Instructions  
+### Instructions  
 
 #### 1. Create or log into your OpenAI account  
 Visit the [OpenAI API documentation](https://platform.openai.com/docs) and log in or sign up to obtain your API key.
