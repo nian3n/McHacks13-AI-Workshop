@@ -42,8 +42,8 @@ source ~/.zshrc
 ```
 
 ## 📚More Learning Resources (beginners)
-[OpenAI Quickstart Guide](https://platform.openai.com/docs/quickstart?utm_source=chatgpt.com)</br>  
-[Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api) 
+[OpenAI Quickstart Guide](https://platform.openai.com/docs/quickstart?utm_source=chatgpt.com)</br>
+[Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)</br>
 [OpenAI API Docs (Models, Parameters, Examples)](https://platform.openai.com/docs)</br>
 [CS50: Introduction to AI with Python](https://cs50.harvard.edu/ai/)</br>
 [Dataquest: Build an AI Chatbot with Python + OpenAI](https://www.dataquest.io/blog/build-an-ai-chatbot-with-python-and-the-openai-api/?utm_source=chatgpt.com)
