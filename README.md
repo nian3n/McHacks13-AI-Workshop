@@ -1,7 +1,10 @@
 ## Getting Started
 #### 1. Clone the repo
-`git clone https://github.com/nian3n/McHacks13-AI-Workshop.git
-cd McHacks13-AI-Workshop`
+```
+git clone https://github.com/nian3n/McHacks13-AI-Workshop.git
+
+cd McHacks13-AI-Workshop
+```
 
 #### 2. Install dependencies
 From the root directory:
