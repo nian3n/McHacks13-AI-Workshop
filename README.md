@@ -11,9 +11,6 @@ From the root directory:
 Install Git Bash:
 Download it here → https://gitforwindows.org/ <br/>
 Once installed, open Git Bash and run all commands (cloning the repo, setting environment variables, running scripts) from there.
-Then open Git Bash and set your environment variable:
-`echo "export OPENAI_API_KEY='your_api_key_here'" >> ~/.bashrc
-source ~/.bashrc`
 
 #### 3. Set & Store your OpenAI API key
 ```
@@ -22,6 +19,11 @@ nano ~/.zshrc   # or ~/.bash_profile
 export OPENAI_API_KEY='your_api_key_here'
 
 source ~/.zshrc
+```
+or <br/>
+```
+`echo "export OPENAI_API_KEY='your_api_key_here'" >> ~/.bashrc
+source ~/.bashrc`
 ```
 ⚠️ Never hard-code your API key directly inside Python files.</br>
 Note: Everyone is going to be use the same API key for this workshop exceptionally. You’re welcome to use your own API key instead if you already have one.
