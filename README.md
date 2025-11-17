@@ -1,20 +1,33 @@
 ## Getting Started
 #### 1. Clone the repo
-git clone [https://github.com/<your-username>/<your-repo-name>.git](https://github.com/nian3n/McHacks13-AI-Workshop.git)\
-
-cd McHacks13-AI-Workshop
+`git clone https://github.com/nian3n/McHacks13-AI-Workshop.git
+cd McHacks13-AI-Workshop`
 
 #### 2. Install dependencies
 From the root directory:
 `pip install openai`
 
-#### 3. Set your OpenAI API key
-Create a `.env` file in the project root:
-`OPENAI_API_KEY='your_api_key_here'`</br>
+##### Note for Windows users
+Install Git Bash:
+Download it here → https://gitforwindows.org/
+Once installed, open Git Bash and run all commands (cloning the repo, setting environment variables, running scripts) from there.
+Then open Git Bash and set your environment variable:
+`echo "export OPENAI_API_KEY='your_api_key_here'" >> ~/.bashrc
+source ~/.bashrc`
+
+#### 3. Set & Store your OpenAI API key
+```
+nano ~/.zshrc   # or ~/.bash_profile
+# add:
+export OPENAI_API_KEY='your_api_key_here'
+
+source ~/.zshrc
+```
 ⚠️ Never hard-code your API key directly inside Python files.</br>
-⚠️ Never commit `.env` to GitHub.
+Note: Everyone is going to be use the same API key for this workshop exceptionally. You’re welcome to use your own API key instead if you already have one.
 
 #### 4. Run the script
+eg.`python(3) simple_chatbot.py`
 
 ## Setting up environment
 Adapted from the work of Tilburg AI (March 11, 2024)  
