@@ -9,7 +9,7 @@ From the root directory:
 
 ##### Note for Windows users
 Install Git Bash:
-Download it here → https://gitforwindows.org/
+Download it here → https://gitforwindows.org/ <br/>
 Once installed, open Git Bash and run all commands (cloning the repo, setting environment variables, running scripts) from there.
 Then open Git Bash and set your environment variable:
 `echo "export OPENAI_API_KEY='your_api_key_here'" >> ~/.bashrc
