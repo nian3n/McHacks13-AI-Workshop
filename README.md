@@ -28,7 +28,7 @@ or <br/>
 `echo "export OPENAI_API_KEY='your_api_key_here'" >> ~/.bashrc
 source ~/.bashrc`
 ```
-⚠️ Never hard-code your API key directly inside Python files.</br>
+⚠️ Never hard-code your API key directly inside Python files.<br/>
 Note: Everyone is going to be use the same API key for this workshop exceptionally. You’re welcome to use your own API key instead if you already have one.
 
 #### 4. Run the script
