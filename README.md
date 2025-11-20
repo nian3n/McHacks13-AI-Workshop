@@ -65,3 +65,5 @@ source ~/.zshrc
 [Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)</br>
 [OpenAI API Docs (Models, Parameters, Examples)](https://platform.openai.com/docs)</br>
 [CS50: Introduction to AI with Python](https://cs50.harvard.edu/ai/)</br>
+
+### link to the slides: https://docs.google.com/presentation/d/13bmBeEh39kxR8qffBkOJNbfyDDhLJaiG63fAZDkpDLE/edit?slide=id.p#slide=id.p
