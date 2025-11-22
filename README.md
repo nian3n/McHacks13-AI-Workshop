@@ -30,7 +30,6 @@ source ~/.bashrc`
 ```
 ⚠️ Never hard-code your API key directly inside Python files.<br/>
 Note: Everyone is going to be use the same API key for this workshop exceptionally. You’re welcome to use your own API key instead if you already have one.
-`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`
 
 #### 4. Run the script
 eg.`python(3) simple_chatbot.py`
